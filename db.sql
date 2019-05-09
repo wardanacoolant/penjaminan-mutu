@@ -125,28 +125,28 @@ CREATE TABLE IF NOT EXISTS `tbl_rps` (
 --
 -- Constraints for table `matakuliah_per_semster`
 --
-ALTER TABLE `matakuliah_per_semster`
-  ADD CONSTRAINT `matakuliah_per_semster_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `mahasiswa` (`nim_mhs`),
-  ADD CONSTRAINT `matakuliah_per_semster_ibfk_2` FOREIGN KEY (`kode_matakuliah`) REFERENCES `matakuliah` (`kode_matakuliah`);
+ALTER TABLE `tbl_matakuliah_per_semster`
+  ADD CONSTRAINT `matakuliah_per_semster_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `tbl_mahasiswa` (`nim_mhs`),
+  ADD CONSTRAINT `matakuliah_per_semster_ibfk_2` FOREIGN KEY (`kode_matakuliah`) REFERENCES `tbl_matakuliah` (`kode_matakuliah`);
 
 --
 -- Constraints for table `perkuliahan`
 --
-ALTER TABLE `perkuliahan`
-  ADD CONSTRAINT `perkuliahan_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `mahasiswa` (`nim_mhs`),
-  ADD CONSTRAINT `perkuliahan_ibfk_2` FOREIGN KEY (`kode_matakuliah`) REFERENCES `matakuliah` (`kode_matakuliah`),
-  ADD CONSTRAINT `perkuliahan_ibfk_3` FOREIGN KEY (`nip_dosen`) REFERENCES `dosen` (`nip_dosen`);
+ALTER TABLE `tbl_perkuliahan`
+  ADD CONSTRAINT `perkuliahan_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `tbl_mahasiswa` (`nim_mhs`),
+  ADD CONSTRAINT `perkuliahan_ibfk_2` FOREIGN KEY (`kode_matakuliah`) REFERENCES `tbl_matakuliah` (`kode_matakuliah`),
+  ADD CONSTRAINT `perkuliahan_ibfk_3` FOREIGN KEY (`nip_dosen`) REFERENCES `tbl_dosen` (`nip_dosen`);
 
 --
 -- Constraints for table `rps`
 --
-ALTER TABLE `rps`
-  ADD CONSTRAINT `rps_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `mahasiswa` (`nim_mhs`),
-  ADD CONSTRAINT `rps_ibfk_2` FOREIGN KEY (`kode_matakuliah`) REFERENCES `matakuliah` (`kode_matakuliah`);
+ALTER TABLE `tbl_rps`
+  ADD CONSTRAINT `rps_ibfk_1` FOREIGN KEY (`nim_mhs`) REFERENCES `tbl_mahasiswa` (`nim_mhs`),
+  ADD CONSTRAINT `rps_ibfk_2` FOREIGN KEY (`kode_matakuliah`) REFERENCES `tbl_matakuliah` (`kode_matakuliah`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
 
 -- Dumping structure for table cias.tbl_items
 DROP TABLE IF EXISTS `tbl_items`;
@@ -229,7 +229,7 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 REPLACE INTO `tbl_users` (`userId`, `email`, `password`, `name`, `mobile`, `roleId`, `isDeleted`, `createdBy`, `createdDtm`, `updatedBy`, `updatedDtm`) VALUES
 	(1, 'admin@gmail.com', '$2y$10$SAvFim22ptA9gHVORtIaru1dn9rhgerJlJCPxRNA02MjQaJnkxawq', 'Admin', '9890098900', 1, 0, 0, '2015-07-01 18:56:49', 1, '2017-06-19 09:22:53'),
 	(2, 'dosen@gmail.com', '$2y$10$Gkl9ILEdGNoTIV9w/xpf3.mSKs0LB1jkvvPKK7K0PSYDsQY7GE9JK', 'Dosen', '9890098900', 2, 0, 1, '2016-12-09 17:49:56', 1, '2017-06-19 09:22:29'),
-	(3, 'supervisor@gmail.com', '$2y$10$MB5NIu8i28XtMCnuExyFB.Ao1OXSteNpCiZSiaMSRPQx1F1WLRId2', 'Supervisor', '9890098900', 3, 0, 1, '2016-12-09 17:50:22', 1, '2017-06-19 09:23:21');
+	(3, 'supervisor@gmail.com', '$2y$10$MB5NIu8i28XtMCnuExyFB.Ao1OXSteNpCiZSiaMSRPQx1F1WLRId2', 'Supervisor', '9890098900', 3, 0, 1, '2016-12-09 17:50:22', 1, '2017-06-19 09:23:21'),
 	(4, 'mahasiswa@gmail.com', '$2y$10$tBwxx6JBGKmU1k2EZ.78R.OO5QQp/1JdO0iFRepNp.jjAUmCdJEr.', 'Mahasiswa', '1805673029', 2, 0, 1, '2019-04-12 14:31:59', NULL, NULL);
 /*!40000 ALTER TABLE `tbl_users` ENABLE KEYS */;
 
