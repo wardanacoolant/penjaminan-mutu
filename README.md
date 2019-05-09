@@ -1,32 +1,32 @@
-# codeigniter-3.2.1-with-admin-LTE-Template-Intigration
-## Admin LTE templete with php codeigniter 3.2.1 latest version intigration
+# Quality Assurance Automation System Department of Informatics Engineering Udayana University
+## Based on PHP Codeigniter 3.2.1 latest version integration
 
 Download the code from repository. Unzip the zip file. 
 
 Open browser; goto localhost/phpmyadmin. 
 Import the file "db.sql" in that database. 
 
-Change database.php in application/config/database.php with your own database details that created previously by importing db.sql
+Change database.php in application/config/database.php with your own database details that created previously by importing db.sql.
 
-Copy the remaining code into your root directory Open browser; goto localhost/[project-folder-name] and press enter
+Copy the remaining code into your root directory. Open browser; goto localhost/[project-folder-name] and press Enter.
 
-The login screen will appear. 
+The login screen will appear. 	
 ## To login, 
 I am going to provide the user-email ids and password below. 
 
-### System Administrator Account : 
-  * email : admin@bewithdhanu.in 
+### Administrator Account : 
+  * email : admin@gmail.com
   * password : 123456 
 
-### Manager Account : 
-  * email : manager@bewithdhanu.in 
+### Lecturer Account : 
+  * email : dosen@gmail.com 
   * password : 123456 
 
-### Employee Account 
-  * email : employee@bewithdhanu.in 
+### Student Account 
+  * email : mahasiswa@gmail.com
   * password : 123456 
 
-Once you logged in with System Administrator account, you can create user or edit previous user if you want.
+Once you logged in with Administrator account, you can create user or edit previous user if you want.
 
 ## Dependencies
 | NAME | VERSION | WEB | REPO |
